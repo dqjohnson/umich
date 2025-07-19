@@ -21,7 +21,7 @@ pip install panel hvplot pandas numpy jupyter_bokeh plotly
 
 'tree-cover-loss-by-dominant-driver.csv', 'wildfire_image.png'
 
-These files can be found on my github site at https://github.com/dqjohnson/umich/tree/Data-Visualization:
+These files can be found on my github site at https://github.com/dqjohnson/umich/tree/Data-Visualization
 
 (4) Once in the Jupyter environment, to run the dashboard, do the following:
 
