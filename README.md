@@ -13,7 +13,7 @@ There is also a video showing and describing my dashboard.
 Instructions to run this dashboard:¶
 
 Pre-requisites: 
-This dashboard uses Panel and hvplots which requires you to run it locally from your computer where python and Jupyter are installed, along with the necessary python and visualization libraries.
+This dashboard uses Panel, hvplots, and plotly which requires you to run it locally from your computer where python and Jupyter are installed, along with the necessary python and visualization libraries.
 
 (1) Install the required python libraries by opening a terminal window on your computer and using the following command:
 
