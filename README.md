@@ -6,7 +6,7 @@ Welcome.
 
 In this folder, you will be able to find the jupyter notebook where I created a really cool dashboard.
 
-In the creation of this dashboard I used panel, hvplot, and plotly - so you must have them installed locally first. 
+In the creation of this dashboard I used panel, hvplot, and plotly. 
 
 There is also a video showing and describing my dashboard.
 
