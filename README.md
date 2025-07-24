@@ -19,12 +19,12 @@ This dashboard uses Panel, hvplots, and plotly which requires you to run it loca
 
 pip install panel hvplot pandas numpy jupyter_bokeh plotly
 
-(3) Next, bring in the data files in the same directory as this notebook:
+(2) Next, bring in the data files in the same directory as this notebook:
 
 'tree-cover-loss-by-dominant-driver.csv', 'wildfire_image.png'
 
 These files can be found on my github site at https://github.com/dqjohnson/umich/tree/Data-Visualization
 
-(4) Once in the Jupyter environment, to run the dashboard, do the following:
+(3) Once in the Jupyter environment, to run the dashboard, do the following:
 
 Run ALL the code cells in the notebook. The dashboard will appear in a new tab in your web browser. Use the widgets that contain the various variables (tree loss factor, year, location) on the left hand side bar to look at the data that appears in the charts on the right.
