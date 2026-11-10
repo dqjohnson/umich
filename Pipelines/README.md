@@ -2,10 +2,12 @@
 A modular Python tool for loading, cleaning, imputing, and visualizing datasets across multiple file formats via a command-line interface (CLI).
 
 ## Introduction
+
 This pipeline automates dataset loading, preprocessing, and exploratory data analysis (EDA). Built with modular design principles, the project breaks down raw data ingestion, missing value imputation, feature categorization, and visual analysis into reusable Python scripts. It also saves the cleaned file into a directory of choice as a csv.
 
 
 ## Key Capabilities
+
 - Multi-Format Ingestion: Supports .csv, .xlsx, .json, .parquet, .txt, and .tsv files.
 
 - Automated Data Cleaning: Removes duplicate rows and imputes missing numeric values with the median and missing categorical values with the mode.
