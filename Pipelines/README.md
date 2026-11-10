@@ -19,7 +19,13 @@ This pipeline automates dataset loading, preprocessing, and exploratory data ana
 - CLI Integration: Accepts flexible command-line arguments to specify input source files and output destinations.
 
 ## How to Clone the Repository
-To clone this repository to your local machine, open your terminal and run:
+You have to first have Git installed on your machine to get started. If you don't have this, open up your terminal and run:
+On Windows:
+```bash
+$ winget install --id Git.Git -e --source winget
+```
+
+To clone this repository to your local machine, run the following from a terminal:
 
 ```bash
 $ git clone https://github.com/dqjohnson/umich.git
@@ -30,6 +36,12 @@ Then, navigate to the Pipelines folder:
 ```bash
 $ cd umich/Pipelines
 ```
+
+To check the git status, you can run the following:
+```bash
+$ git status
+```
+
 ## Environment Setup & Requirements
 ### Prerequisites
 You must have [python](https://www.python.org/) installed to use these scripts.
@@ -41,12 +53,6 @@ Python 3.10 or higher (tested on Python 3.14)
 The requirements.txt file has all packages and versions required to run these scripts using the [pip package manager](https://pypi.org/project/pip/). 
 ```bash
 $ python -m pip install -r requirements.txt
-```
-
-## Data File Setup
-Prepare your input dataset files and place them in a folder (such as data/) within your project root folder:
-```bash
-$ mkdir -p data
 ```
 
 ## Scripts and Functionality 
@@ -67,6 +73,9 @@ Contains plotting functions:
 - `scatter_splom()` Creates a scatter plot matrix (SPLOM) with histograms along the diagonal for numeric features.
 - `categorical_distributions_plot()` Creates side-by-side count plots for categorical features.
 
+## Data File Setup
+Once you clone the github repository, it will automatically be given two sample datasets, located in the folder `\data`.  However, if you chose to add your own datasets, you can add them anywhere.  You will just need to specify the path per the examples of how to run the code below.  
+
 ## How to Run
 Run the `main.py` script from your terminal by passing the input file path followed by your desired cleaned output file path:
 
@@ -78,7 +87,7 @@ Processing a CSV dataset:
 $ python main.py data/penguins.csv data/cleaned_penguins.csv
 ```
 
-Processing an Excel file:
+Processing an Excel file (remember to specify a `.csv` output file):
 ```bash 
-$ python main.py data/titanic.xlsx data/cleaned_titanic.xlsx
+$ python main.py data/titanic.xlsx data/cleaned_titanic.csv
 ```
