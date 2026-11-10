@@ -20,7 +20,7 @@ This pipeline automates dataset loading, preprocessing, and exploratory data ana
 
 ## How to Clone the Repository
 You have to first have Git installed on your machine to get started. If you don't have this, open up your terminal and run:
-On Windows:
+- On Windows:
 ```bash
 $ winget install --id Git.Git -e --source winget
 ```
