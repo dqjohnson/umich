@@ -62,8 +62,8 @@ Provides utility functions, `numeric_cols()` and `categorical_cols()`, to filter
 
 ### visualize.py
 Contains plotting functions:
-- `scatter_splom()`: Creates a scatter plot matrix (SPLOM) with histograms along the diagonal for numeric features.
-- `categorical_distributions_plot()`: Creates side-by-side count plots for categorical variables using a single shared y-axis scale to avoid plot overlap.
+- `scatter_splom()` Creates a scatter plot matrix (SPLOM) with histograms along the diagonal for numeric features.
+- `categorical_distributions_plot()` Creates side-by-side count plots for categorical features.
 
 ## How to Run
 Run the script from your terminal by passing the input file path followed by your desired cleaned output file path:
