@@ -2,7 +2,7 @@
 A modular Python tool for loading, cleaning, imputing, and visualizing datasets across multiple file formats via a command-line interface (CLI).
 
 ## Introduction
-This pipeline automates exploratory data analysis (EDA) and dataset preprocessing. Built with modular design principles, the project breaks down raw data ingestion, missing value imputation, feature categorization, and visual analysis into lightweight, reusable Python scripts.
+This pipeline automates dataset loading, preprocessing, and exploratory data analysis (EDA). Built with modular design principles, the project breaks down raw data ingestion, missing value imputation, feature categorization, and visual analysis into reusable Python scripts.
 
 
 ## Key Capabilities
@@ -26,13 +26,16 @@ $ cd umich/Pipelines
 ```
 ## Environment Setup & Requirements
 ### Prerequisites
+You must have [python](https://www.python.org/) installed to use these scripts.
+
 Python 3.10 or higher (tested on Python 3.14)
 
 Install Required packages:
+
+The requirements.txt file has all packages and versions required to run these scripts using the [pip package manager](https://pypi.org/project/pip/). 
 ```bash
-$ pip install pandas seaborn matplotlib openpyxl pyarrow
+$ python -m pip install -r requirements.txt
 ```
-Also, review  requirements.txt file for all packages and versions
 
 ## Data File Setup
 Prepare your input dataset files and place them in a folder (such as data/) within your project root folder:
@@ -61,13 +64,15 @@ Contains plotting functions:
 ## How to Run
 Run the script from your terminal by passing the input file path followed by your desired cleaned output file path:
 
-python main.py <input_file> <output_file>
+Format: `python main.py <input_file> <output_file>`
 
-Examples:
+### Examples:
 Processing a CSV dataset:
-python main.py data/penguins.csv data/cleaned_penguins.csv
+```bash
+$ python main.py data/penguins.csv data/cleaned_penguins.csv
+```
 
 Processing an Excel file:
-python main.py data/titanic.xlsx data/cleaned_titanic.xlsx
-
-
+```bash 
+$ python main.py data/titanic.xlsx data/cleaned_titanic.xlsx
+```
