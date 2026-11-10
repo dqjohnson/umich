@@ -24,6 +24,10 @@ You have to first have Git installed on your machine to get started. If you don'
 ```bash
 $ winget install --id Git.Git -e --source winget
 ```
+- On Mac:
+```bash
+$brew install git
+```
 
 To clone this repository to your local machine, run the following from a terminal:
 
