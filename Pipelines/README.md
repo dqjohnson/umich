@@ -1,1 +1,73 @@
-# umich
+# Modular Data Cleaning & Visualization Pipeline
+A modular Python tool for loading, cleaning, imputing, and visualizing datasets across multiple file formats via a command-line interface (CLI).
+
+## Introduction
+This pipeline automates exploratory data analysis (EDA) and dataset preprocessing. Built with modular design principles, the project breaks down raw data ingestion, missing value imputation, feature categorization, and visual analysis into lightweight, reusable Python scripts.
+
+
+## Key Capabilities
+•	Multi-Format Ingestion: Supports .csv, .xlsx, .json, .parquet, .txt, and .tsv files.
+•	Automated Data Cleaning: Removes duplicate rows and imputes missing numeric values with the median and missing categorical values with the mode.
+•	Dynamic Feature Detection: Automatically segregates numeric and categorical columns for tailored preprocessing and visualization.
+•	Publication-Ready Visualizations: Generates scatter plot matrices (SPLOM) for continuous features and clean count distributions for categorical features with zero hardcoded visual parameters.
+•	CLI Integration: Accepts flexible command-line arguments to specify input source files and output destinations.
+
+## How to Clone the Repository
+To clone this repository to your local machine, open your terminal and run:
+
+```bash
+$ git clone https://github.com/dqjohnson/umich.git
+```
+
+Then, navigate to the Pipelines folder:
+
+```bash
+$ cd umich/Pipelines
+```
+## Environment Setup & Requirements
+### Prerequisites
+Python 3.10 or higher (tested on Python 3.14)
+
+Install Required packages:
+```bash
+$ pip install pandas seaborn matplotlib openpyxl pyarrow
+```
+Also, review  requirements.txt file for all packages and versions
+
+## Data File Setup
+Prepare your input dataset files and place them in a folder (such as data/) within your project root folder:
+```bash
+$ mkdir -p data
+```
+
+## Scripts and Functionality 
+### main.py
+CLI entry point for running the pipeline. Serves as the command-line interface using argparse. It accepts mandatory input and output file paths from the user, orchestrates data loading, triggers cleaning routines, and launches visual plots.
+
+### clean_data.py
+Handles data cleaning by dropping exact duplicate rows, imputing missing numerical values using column medians, imputing missing categorical values using column modes, and exporting the cleaned dataset to the specified output destination.
+
+### load_data.py
+Extracts file extensions dynamically and reads datasets into Pandas DataFrames. Supported formats include `CSV`, `Excel` (.xlsx), `JSON`, `Parquet`, `TXT`, and `TSV`.
+
+### get_data_types.py
+Provides utility functions numeric_cols() and categorical_cols() to filter and separate DataFrame columns based on their data types.
+
+### visualize.py
+Contains plotting functions:
+`scatter_splom()`: Creates a scatter plot matrix (SPLOM) with histograms along the diagonal for numeric features.
+`categorical_distributions_plot()`: Creates side-by-side count plots for categorical variables using a single shared y-axis scale to avoid plot overlap.
+
+## How to Run
+Run the script from your terminal by passing the input file path followed by your desired cleaned output file path:
+
+python main.py <input_file> <output_file>
+
+Examples:
+Processing a CSV dataset:
+python main.py data/penguins.csv data/cleaned_penguins.csv
+
+Processing an Excel file:
+python main.py data/titanic.xlsx data/cleaned_titanic.xlsx
+
+
