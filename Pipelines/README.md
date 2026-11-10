@@ -66,9 +66,9 @@ Contains plotting functions:
 - `categorical_distributions_plot()` Creates side-by-side count plots for categorical features.
 
 ## How to Run
-Run the script from your terminal by passing the input file path followed by your desired cleaned output file path:
+Run the `main.py` script from your terminal by passing the input file path followed by your desired cleaned output file path:
 
-│   Format: `python main.py <input_file> <output_file>`
+- Format: `python main.py <input_file> <output_file>`
 
 ### Examples:
 Processing a CSV dataset:
