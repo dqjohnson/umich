@@ -7,9 +7,13 @@ This pipeline automates dataset loading, preprocessing, and exploratory data ana
 
 ## Key Capabilities
 │   Multi-Format Ingestion: Supports .csv, .xlsx, .json, .parquet, .txt, and .tsv files.
+
 │   Automated Data Cleaning: Removes duplicate rows and imputes missing numeric values with the median and missing categorical values with the mode.
+
 │   Dynamic Feature Detection: Automatically segregates numeric and categorical columns for tailored preprocessing and visualization.
+
 │   Publication-Ready Visualizations: Generates scatter plot matrices (SPLOM) for continuous features and clean count distributions for categorical features with zero hardcoded visual parameters.
+
 │   CLI Integration: Accepts flexible command-line arguments to specify input source files and output destinations.
 
 ## How to Clone the Repository
@@ -59,6 +63,7 @@ Provides utility functions, `numeric_cols()` and `categorical_cols()`, to filter
 ### visualize.py
 Contains plotting functions:
 │   `scatter_splom()`: Creates a scatter plot matrix (SPLOM) with histograms along the diagonal for numeric features.
+
 │   `categorical_distributions_plot()`: Creates side-by-side count plots for categorical variables using a single shared y-axis scale to avoid plot overlap.
 
 ## How to Run
